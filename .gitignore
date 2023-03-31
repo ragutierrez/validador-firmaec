@@ -1,0 +1,9 @@
+# Binary Files
+**.pyc
+**.pdf
+
+# Virtual environments
+env
+
+# IDEs
+.vscode

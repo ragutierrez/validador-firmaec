@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app_python:
+    build:
+      context: .
+      dockerfile: ./.compose/.local/Dockerfile
+    image: dev_validar_firma
+    volumes:
+      - ./app:/app
+      - ./files:/files
+    networks:
+      vfnet:
+        ipv4_address: 30.0.0.2
+
+networks:
+  vfnet:
+    ipam:
+      config:
+        - subnet: 30.0.0.0/24
+          gateway: 30.0.0.1
