@@ -18,11 +18,11 @@ El presente proyecto es un consumo del API brindada por MINTEL para validar docu
 
 3. Se debe construir el contenedor donde se ejecutará el llamado al API (Se puede obviar este paso).
 
-    ```docker-compose -f local.yml build```
+    ```docker compose -f local.yml build```
 
 4. Ejecutar el siguiente comando:
 
-    ```docker-compose -f local.yml run --rm --service-ports app_python python verifica_firma.py```
+    ```docker compose -f local.yml run --rm --service-ports app_python python verifica_firma.py```
 
     La respuesta será un JSON con la información de cada archivo firmado con la siguiente estructura:
     ```
